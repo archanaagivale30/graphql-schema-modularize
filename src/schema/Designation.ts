@@ -5,9 +5,7 @@ type Designation {
     id :ID!,
     title : String,
     created : DateTime,
-    updatedAt : DateTime,
-    createdBy:Employee,
-    UpdatedBy:Employee
+    updatedAt : DateTime
     }`;
 export const inputs =`
 input DesignationInput {

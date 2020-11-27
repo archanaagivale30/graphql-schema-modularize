@@ -1,6 +1,6 @@
 import EmployeeController from '../controllers/Employee';
 
-export const types=`
+export const types = `
 scalar DateTime
 
 type Employee {
@@ -8,23 +8,21 @@ type Employee {
     name : String,
     email : String,
     created : DateTime,
-    updatedAt : DateTime,
-    createdBy:Employee,
-    UpdatedBy:Employee
+    updatedAt : DateTime
     }`;
-export const inputs =`
+export const inputs = `
 input EmployeeInput {
     title : String
   }
 `;
-export const queries =`   
+export const queries = `   
 Employees: [Employee]
 `;
 
-export const mutations= `
+export const mutations = `
 createEmployee(input: EmployeeInput): Employee
 `
-export const roots={
+export const roots = {
     Employees: EmployeeController.getAllEmployees,
     createEmployee: EmployeeController.create,
 }
